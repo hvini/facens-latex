@@ -5,3 +5,20 @@ services: docker
 script:
   - docker pull dxjoke/tectonic-docker
   - docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic main.tex"
+
+before_deploy:
+  - export LATEST_TAG=$(git describe --tags)
+  - echo $LATEST_TAG
+  - chmod +x genTag.sh
+  - export TRAVIS_TAG=$(./genTag.sh ${LATEST_TAG})
+  - git tag $TRAVIS_TAG
+  - echo $TRAVIS_TAG
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
