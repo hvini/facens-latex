@@ -16,8 +16,7 @@ before_deploy:
 
 deploy:
   provider: releases
-  api_key:
-    secure: $TOKEN
+  api_key: $TOKEN
   file: 
     - ./src/main.pdf
   skip_cleanup: true
