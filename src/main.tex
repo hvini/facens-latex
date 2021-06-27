@@ -227,67 +227,13 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % \begin{fichacatalografica}
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
-
-\begin{fichacatalografica}
-	\sffamily
-	\vspace*{\fill}					% Posição vertical
-	\begin{center}					% Minipage Centralizado
-	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
-	\small
-	\imprimirautor
-	%Sobrenome, Nome do autor
-	
-	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	\imprimirlocal, \imprimirdata-
-	
-	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
-	
-	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-	
-	\hspace{0.5cm}
-	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	\imprimirdata.}\\
-	
-	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		2. Palavra-chave3.
-		I. Orientador.
-		II. Universidade xxx.
-		III. Faculdade de xxx.
-		IV. Título 			
-	\end{minipage}}
-	\end{center}
-\end{fichacatalografica}
+\input{main/ficha_catalografica.tex}
 % ---
 
 % ---
 % Inserir errata
 % ---
-\begin{errata}
-Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
-
-\vspace{\onelineskip}
-
-FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
-reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
-rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
-cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
-Zootecnia, Universidade de São Paulo, São Paulo, 2011.
-
-\begin{table}[htb]
-\center
-\footnotesize
-\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
-  \hline
-   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
-    \hline
-    1 & 10 & auto-conclavo & autoconclavo\\
-   \hline
-\end{tabular}
-\end{table}
-
-\end{errata}
+\input{main/errata.tex}
 % ---
 
 % ---
@@ -303,142 +249,31 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
 % \includepdf{folhadeaprovacao_final.pdf}
 % \end{folhadeaprovacao}
 %
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
+\input{main/folha_aprovacao.tex}
 % ---
 
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-\end{dedicatoria}
+\input{main/dedicatoria.tex}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-\begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
-
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://www.abntex.net.br/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
-
-\end{agradecimentos}
+\input{main/agradecimentos.tex}
 % ---
 
 % ---
 % Epígrafe
 % ---
-\begin{epigrafe}
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
-	\end{flushright}
-\end{epigrafe}
+\input{main/epigrafe.tex}
 % ---
 
 % ---
 % RESUMOS
 % ---
-
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
-\end{resumo}
-
-% resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   This is the english abstract.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Keywords}: latex. abntex. text editoration.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em francês 
-\begin{resumo}[Résumé]
- \begin{otherlanguage*}{french}
-    Il s'agit d'un résumé en français.
- 
-   \textbf{Mots-clés}: latex. abntex. publication de textes.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em espanhol
-\begin{resumo}[Resumen]
- \begin{otherlanguage*}{spanish}
-   Este es el resumen en español.
-  
-   \textbf{Palabras clave}: latex. abntex. publicación de textos.
- \end{otherlanguage*}
-\end{resumo}
+\input{main/resumo.tex}
 % ---
 
 % ---
@@ -468,21 +303,13 @@ contribuirão para a evolução do \abnTeX.
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
-\end{siglas}
+\input{main/lista_siglas.tex}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
+\input{main/lista_simbolos.tex}
 % ---
 
 % ---
@@ -503,135 +330,14 @@ contribuirão para a evolução do \abnTeX.
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\chapter{Introdução}
-% ----------------------------------------------------------
-
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
-gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
-- Trabalhos acadêmicos - Apresentação}.
-
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
-
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
-
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folha de aprovação, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} para mais informações.
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
-
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
-
-Equipe \abnTeX 
-
-Lauro César Araujo
+\input{main/introducao.tex}
 
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Preparação da pesquisa}
-% ----------------------------------------------------------
-
-% ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ---
-\include{abntex2-modelo-include-comandos}
-% ---
-
-\chapter{Conteúdos específicos do modelo de trabalho acadêmico}\label{cap_trabalho_academico}
-
-\section{Quadros}
-
-Este modelo vem com o ambiente \texttt{quadro} e impressão de Lista de quadros 
-configurados por padrão. Verifique um exemplo de utilização:
-
-\begin{quadro}[htb]
-\caption{\label{quadro_exemplo}Exemplo de quadro}
-\begin{tabular}{|c|c|c|c|}
-	\hline
-	\textbf{Pessoa} & \textbf{Idade} & \textbf{Peso} & \textbf{Altura} \\ \hline
-	Marcos & 26    & 68   & 178    \\ \hline
-	Ivone  & 22    & 57   & 162    \\ \hline
-	...    & ...   & ...  & ...    \\ \hline
-	Sueli  & 40    & 65   & 153    \\ \hline
-\end{tabular}
-\fonte{Autor.}
-\end{quadro}
-
-Este parágrafo apresenta como referenciar o quadro no texto, requisito
-obrigatório da ABNT. 
-Primeira opção, utilizando \texttt{autoref}: Ver o \autoref{quadro_exemplo}. 
-Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
-
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\part{Referenciais teóricos}
-% ----------------------------------------------------------
-
-% ---
-% Capitulo de revisão de literatura
-% ---
-\chapter{Lorem ipsum dolor sit amet}
-% ---
-
-% ---
-\section{Aliquam vestibulum fringilla lorem}
-% ---
-
-\lipsum[1]
-
-\lipsum[2-3]
-
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\part{Resultados}
-% ----------------------------------------------------------
-
-% ---
-% primeiro capitulo de Resultados
-% ---
-\chapter{Lectus lobortis condimentum}
-% ---
-
-% ---
-\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae}
-% ---
-
-\lipsum[21-22]
-
-% ---
-% segundo capitulo de Resultados
-% ---
-\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
-elementum}
-% ---
-
-% ---
-\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
-% ---
-
-\lipsum[24]
+\input{main/preparacao_pesquisa.tex}
+\input{main/referenciais_teoricos.tex}
+\input{main/resultados.tex}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -643,10 +349,7 @@ elementum}
 % ---
 % Conclusão
 % ---
-\chapter{Conclusão}
-% ---
-
-\lipsum[31-33]
+\input{main/conclusao.tex}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -657,7 +360,7 @@ elementum}
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{abntex2-modelo-references}
+\bibliography{abntex2-modelo-references.bib}
 
 % ----------------------------------------------------------
 % Glossário
@@ -670,62 +373,12 @@ elementum}
 % ----------------------------------------------------------
 % Apêndices
 % ----------------------------------------------------------
-
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
-
-% Imprime uma página indicando o início dos apêndices
-\partapendices
-
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
-
-\end{apendicesenv}
-% ---
-
+\input{main/apendices.tex}
 
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
-
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-% Imprime uma página indicando o início dos anexos
-\partanexos
-
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
+\input{main/anexos.tex}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
