@@ -1,0 +1,58 @@
+% ---
+% Variáveis
+% ---
+\newcommand{\coordenadoria}{\def \@coordenadoria}
+\newcommand{\integranteum}{\def \@integranteum}
+\newcommand{\integrantedois}{\def \@integrantedois}
+\newcommand{\subtitulo}{\def \@subtitulo}
+
+% ---
+% Inicialização das variáveis
+% ---
+\titulo{}
+\subtitulo
+\autor{}
+\integranteum{}
+\integrantedois{}
+\local{}
+\data{}
+\orientador{}
+\coorientador{}
+\instituicao{}
+\tipotrabalho{}
+\preambulo{}
+\coordenadoria{}
+
+% ---
+% Imprimir as váriaveis
+% ---
+\newcommand{\imprimircoordenadoria}{\@coordenadoria}
+\newcommand{\imprimirsubtitulo}{\@subtitulo}
+\newcommand{\imprimirintegranteum}{\@integranteum}
+\newcommand{\imprimirintegrantedois}{\@integrantedois}
+
+% capa
+\renewcommand{\imprimircapa}{
+    \begin{titlingpage}
+        \begin{center}
+            % Todos elementos da capa devem estar em negrito
+            \bfseries
+            \includegraphics[scale=0.5]{logo-f.png}
+            
+            \MakeUppercase{\imprimircoordenadoria}
+            
+            \vspace*{5cm}
+
+            \MakeUppercase{\imprimirintegranteum}\par
+            \MakeUppercase{\imprimirintegrantedois}
+            
+            \vspace*{5cm}
+
+            \MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo
+            
+            \vfill
+            \normalsize\imprimirlocal\par
+            \normalsize\imprimirdata
+        \end{center}
+    \end{titlingpage}
+}
