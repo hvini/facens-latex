@@ -31,7 +31,13 @@
 \newcommand{\imprimirintegranteum}{\@integranteum}
 \newcommand{\imprimirintegrantedois}{\@integrantedois}
 
-% capa
+% ---
+% Re-adaptações de capa e folha de rosto
+% ---
+
+% ---
+% Capa
+% ---
 \renewcommand{\imprimircapa}{
     \begin{titlingpage}
         \begin{center}
@@ -55,4 +61,39 @@
             \normalsize\imprimirdata
         \end{center}
     \end{titlingpage}
+}
+
+% ---
+% Folha de rosto
+% ---
+\renewcommand{\imprimirfolhaderosto}{
+    \begin{center}
+        \textbf{\imprimirintegranteum}\par
+        \textbf{\imprimirintegrantedois}
+
+        \vspace*{5cm}
+
+        \textbf{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}
+
+        \vspace*{5cm}
+
+        %Adiciona o espaço da margem
+        \hspace*{8cm}
+        \begin{minipage}{8cm}
+            \begin{SingleSpace}  
+                \imprimirpreambulo
+            \end{SingleSpace}		
+        \end{minipage}
+
+        \vfill
+        \textbf{\normalsize\imprimirlocal}\par
+        \textbf{\normalsize\imprimirdata}
+    \end{center}
+}
+
+% ---
+% Ficha catalografica
+% ---
+\newcommand{\imprimirfichacatalografica}[1]{%
+	\includepdf[pages=1]{#1}
 }
