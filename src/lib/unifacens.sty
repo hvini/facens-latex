@@ -1,3 +1,25 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o Centro Universitário Facens
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Vinícius. 
+%% Further information about abnTeX2 are available
+%% on https://github.com/abntex/abntex2
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA O CENTRO UNIVERSITÁRIO FACENS.
+% ---
+
 % ---
 % Variáveis
 % ---
@@ -66,7 +88,7 @@
 % ---
 % Folha de rosto
 % ---
-\renewcommand{\imprimirfolhaderosto}{
+\renewcommand{\folhaderostocontent}{
     \begin{center}
         \textbf{\imprimirintegranteum}\par
         \textbf{\imprimirintegrantedois}
@@ -86,14 +108,11 @@
         \end{minipage}
 
         \vfill
-        \textbf{\normalsize\imprimirlocal}\par
-        \textbf{\normalsize\imprimirdata}
+        \normalsize{\textbf\imprimirlocal}\par
+        \normalsize{\textbf\imprimirdata}
     \end{center}
 }
 
 % ---
-% Ficha catalografica
+% FIM DAS CUSTOMIZACOES PARA O CENTRO UNIVERSITÁRIO FACENS
 % ---
-\newcommand{\imprimirfichacatalografica}[1]{%
-	\includepdf[pages=1]{#1}
-}
