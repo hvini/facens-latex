@@ -32,16 +32,13 @@
 % Inicialização das variáveis
 % ---
 \titulo{}
-\subtitulo
-\autor{}
+\subtitulo{}
 \integranteum{}
 \integrantedois{}
 \local{}
 \data{}
 \orientador{}
 \coorientador{}
-\instituicao{}
-\tipotrabalho{}
 \preambulo{}
 \coordenadoria{}
 
@@ -67,20 +64,20 @@
             \bfseries
             \includegraphics[scale=0.5]{logo-f.png}
             
-            \MakeUppercase{\imprimircoordenadoria}
+            \Large{\MakeUppercase{\imprimircoordenadoria}}
             
             \vspace*{5cm}
 
-            \MakeUppercase{\imprimirintegranteum}\par
-            \MakeUppercase{\imprimirintegrantedois}
+            \large{\MakeUppercase{\imprimirintegranteum}}\par
+            \large{\MakeUppercase{\imprimirintegrantedois}}
             
             \vspace*{5cm}
 
-            \MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo
+            \large{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}
             
             \vfill
-            \normalsize\imprimirlocal\par
-            \normalsize\imprimirdata
+            \large\imprimirlocal\par
+            \large\imprimirdata
         \end{center}
     \end{titlingpage}
 }
@@ -90,32 +87,28 @@
 % ---
 \renewcommand{\folhaderostocontent}{
     \begin{center}
-        \textbf{\imprimirintegranteum}\par
-        \textbf{\imprimirintegrantedois}
+        \normalsize{\textbf{\imprimirintegranteum}}\par
+        \normalsize{\textbf{\imprimirintegrantedois}}
 
         \vspace*{5cm}
 
-        \textbf{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}
+        \large{\textbf{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}}
 
         \vspace*{5cm}
 
         %Adiciona o espaço da margem
         \hspace*{8cm}
         \begin{minipage}{8cm}
-            \begin{SingleSpace}  
-                \imprimirpreambulo
-            \end{SingleSpace}		
+            \begin{SingleSpace}
+                \small\imprimirpreambulo
+            \end{SingleSpace}
         \end{minipage}
 
         \vfill
-        \normalsize{\textbf\imprimirlocal}\par
-        \normalsize{\textbf\imprimirdata}
+        \large{\textbf\imprimirlocal}\par
+        \large{\textbf\imprimirdata}
     \end{center}
 }
-
-% Renomeando lista de abreviaturas e siglas para lista de siglas.
-\renewcommand{\listadesiglasname}{LISTA DE SIGLAS}
-
 
 % ---
 % FIM DAS CUSTOMIZACOES PARA O CENTRO UNIVERSITÁRIO FACENS

@@ -52,10 +52,9 @@
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
-\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{microtype} 			% Para melhorias de justificação
 \usepackage{lib/unifacens}      % Adaptações as normas da UniFacens
-\usepackage{pdfpages}           % para incluir pdf no documento
-\usepackage{ragged2e}           % para alinhamento de texto
+\usepackage{pdfpages}           % Para incluir pdf no documento
 % ---
 		
 % ---
@@ -89,9 +88,27 @@
 	\else
 		Citado #1 vezes nas páginas #2.%
 	\fi}%
+% ---
+
+% --- 
+% CONFIGURAÇÕES DE ESTILO E TAMANHO DA FONTE
+% --- 
+
+% ---
 % Define a fonte padrão como serif (Arial)
 \renewcommand{\familydefault}{\sfdefault}
+% Define o tamanho da fonte dos capitulos para 14pt.
+\renewcommand*{\chapnumfont}{\normalfont\large\bfseries\sffamily}
+\renewcommand*{\chaptitlefont}{\normalfont\large\bfseries\sffamily}
+
+% Define o tamanho da fonte das seções e sub-seções para 12pt,
+% sendo as seções em negrito.
+\setsecheadstyle{\normalsize\bfseries}
+\setsubsecheadstyle{\normalsize}
 % ---
+
+% Renomeando lista de abreviaturas e siglas para lista de siglas.
+\renewcommand{\listadesiglasname}{Lista de siglas}
 
 \graphicspath{{./images/}}
 
@@ -188,6 +205,11 @@
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Controle do espaçamento após um capitulo, seção e sub-seção
+\setlength{\afterchapskip}{\baselineskip}
+\setlength{\aftersecskip}{\baselineskip}
+\setlength{\aftersubsecskip}{\baselineskip}
 
 % ---
 % compila o indice
@@ -296,7 +318,7 @@
 % PARTE
 % ----------------------------------------------------------
 \input{main/preparacao_pesquisa.tex}
-\input{main/referenciais_teoricos.tex}
+\input{main/metodologias.tex}
 \input{main/resultados.tex}
 
 % ----------------------------------------------------------

@@ -20,3 +20,7 @@ deploy:
   file: 
     - ./src/main.pdf
   skip_cleanup: true
+
+branches:
+  only:
+    - master
