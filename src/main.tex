@@ -94,9 +94,9 @@
 % CONFIGURAÇÕES DE ESTILO E TAMANHO DA FONTE
 % --- 
 
-% ---
 % Define a fonte padrão como serif (Arial)
 \renewcommand{\familydefault}{\sfdefault}
+
 % Define o tamanho da fonte dos capitulos para 14pt.
 \renewcommand*{\chapnumfont}{\normalfont\large\bfseries\sffamily}
 \renewcommand*{\chaptitlefont}{\normalfont\large\bfseries\sffamily}
@@ -113,13 +113,9 @@
 \graphicspath{{./images/}}
 
 % ---
-% Informações sobre a coordenadoria
-% ---
-\coordenadoria{Coordenadoria de Engenharia da Computação}
-
-% ---
 % Informações sobre o trabalho
 % ---
+\coordenadoria{Coordenadoria de Engenharia da Computação}
 \titulo{Titulo do trabalho}
 \subtitulo{Subtitulo se houver}
 \integranteum{Nome do aluno 1}
@@ -232,116 +228,37 @@
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
-% \pretextual
-
-% ---
-% Capa
-% ---
 \imprimircapa
-% ---
-
-% ---
-% Folha de rosto
-% ---
 \imprimirfolhaderosto*
-% ---
 
-% ---
-% Inserir a ficha bibliografica
-% ---
-\begin{fichacatalografica}
-	\includepdf[page=1]{main/ficha_catalografica.pdf}
-\end{fichacatalografica}
-% ---
-
-% ---
-% Inserir folha de aprovação
-% ---
-\begin{folhadeaprovacao}
-	\includepdf[page=1]{main/folha_aprovacao.pdf}
-\end{folhadeaprovacao}
-% ---
-
-% ---
-% Agradecimentos
-% ---
-\input{main/agradecimentos.tex}
-% ---
-
-% ---
-% Epígrafe
-% ---
-\input{main/epigrafe.tex}
-% ---
-
-% ---
-% RESUMOS
-% ---
-\input{main/resumo.tex}
-% ---
-
-% ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\input{main/lista_siglas.tex}
-% ---
-
-% ---
-% inserir o sumario
-% ---
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage
-% ---
-
-
+\input{partes/pre_textuais/ficha_catalografica.tex}
+\input{partes/pre_textuais/folha_aprovacao.tex}
+\input{partes/pre_textuais/agradecimentos.tex}
+\input{partes/pre_textuais/epigrafe.tex}
+\input{partes/pre_textuais/resumo.tex}
+\input{partes/pre_textuais/lista_figuras.tex}
+\input{partes/pre_textuais/lista_siglas.tex}
+\input{partes/pre_textuais/sumario.tex}
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
 
-% ----------------------------------------------------------
-% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
-% ----------------------------------------------------------
-\input{main/introducao.tex}
+\input{partes/textuais/introducao.tex}
+\input{partes/textuais/preparacao_pesquisa.tex}
+\input{partes/textuais/metodologias.tex}
+\input{partes/textuais/resultados.tex}
 
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\input{main/preparacao_pesquisa.tex}
-\input{main/metodologias.tex}
-\input{main/resultados.tex}
-
-% ----------------------------------------------------------
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ----------------------------------------------------------
 \phantompart
 
-% ---
-% Conclusão
-% ---
-\input{main/conclusao.tex}
+\input{partes/textuais/conclusao.tex}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
 \postextual
-% ----------------------------------------------------------
 
-% ----------------------------------------------------------
-% Referências bibliográficas
-% ----------------------------------------------------------
 \bibliography{abntex2-modelo-references}
 
 %---------------------------------------------------------------------

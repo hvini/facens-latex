@@ -31,32 +31,24 @@
 % ---
 % Inicialização das variáveis
 % ---
-\titulo{}
-\subtitulo{}
+\coordenadoria{}
 \integranteum{}
 \integrantedois{}
-\local{}
-\data{}
-\orientador{}
-\coorientador{}
-\preambulo{}
-\coordenadoria{}
+\subtitulo{}
 
 % ---
 % Imprimir as váriaveis
 % ---
 \newcommand{\imprimircoordenadoria}{\@coordenadoria}
-\newcommand{\imprimirsubtitulo}{\@subtitulo}
 \newcommand{\imprimirintegranteum}{\@integranteum}
 \newcommand{\imprimirintegrantedois}{\@integrantedois}
+\newcommand{\imprimirsubtitulo}{\@subtitulo}
 
 % ---
 % Re-adaptações de capa e folha de rosto
 % ---
 
-% ---
 % Capa
-% ---
 \renewcommand{\imprimircapa}{
     \begin{titlingpage}
         \begin{center}
@@ -82,9 +74,7 @@
     \end{titlingpage}
 }
 
-% ---
 % Folha de rosto
-% ---
 \renewcommand{\folhaderostocontent}{
     \begin{center}
         \normalsize{\textbf{\imprimirintegranteum}}\par
