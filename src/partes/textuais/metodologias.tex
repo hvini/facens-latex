@@ -1,13 +1,25 @@
-% ---
-% Capitulo de metodologias
-% ---
-\chapter{Metodologias}
-% ---
+\chapter{Desenvolvimento}
 
-% ---
-\section{Aliquam vestibulum fringilla lorem}
-% ---
+\section{Quadros}
 
-\lipsum[1]
+Este modelo vem com o ambiente \texttt{quadro} e impressão de Lista de quadros 
+configurados por padrão. Verifique um exemplo de utilização:
 
-\lipsum[2-3]
+\begin{quadro}[htb]
+    \caption{\label{quadro_exemplo}Exemplo de quadro}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Pessoa} & \textbf{Idade} & \textbf{Peso} & \textbf{Altura} \\ \hline
+        Marcos & 26    & 68   & 178    \\ \hline
+        Ivone  & 22    & 57   & 162    \\ \hline
+        ...    & ...   & ...  & ...    \\ \hline
+        Sueli  & 40    & 65   & 153    \\ \hline
+    \end{tabular}
+    \fonte{Autor.}
+\end{quadro}
+
+\subsection{Pellentesque sit amet pede ac sem eleifend consectetuer}
+Este parágrafo apresenta como referenciar o quadro no texto, requisito
+obrigatório da ABNT. 
+Primeira opção, utilizando \texttt{autoref}: Ver o \autoref{quadro_exemplo}. 
+Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
