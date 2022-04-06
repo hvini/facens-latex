@@ -65,7 +65,11 @@
             
             \vspace*{5cm}
 
-            \large{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}
+            \ifx\@subtitulo\empty
+                \large{\MakeUppercase{\imprimirtitulo}}
+            \else
+                \large{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}
+            \fi
             
             \vfill
             \large\imprimirlocal\par
@@ -82,7 +86,11 @@
 
         \vspace*{5cm}
 
-        \large{\textbf{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}}
+        \ifx\@subtitulo\empty
+            \large{\textbf{\MakeUppercase{\imprimirtitulo}}}
+        \else
+            \large{\textbf{\MakeUppercase{\imprimirtitulo}: \imprimirsubtitulo}}
+        \fi
 
         \vspace*{5cm}
 
