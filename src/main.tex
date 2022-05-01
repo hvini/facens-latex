@@ -116,17 +116,17 @@
 % Informações sobre o trabalho
 % ---
 \coordenadoria{Coordenadoria de Engenharia da Computação}
-\titulo{Titulo do trabalho}
-\subtitulo{Subtitulo se houver}
+\titulo{Aplica{\c c}{\~a}o de aprendizagem por refor{\c c}o em carros aut{\^o}nomos atrav{\'e}s de topologias aumentantes}
+%\subtitulo{Subtitulo se houver}
 \integranteum{Nome do aluno 1}
 \integrantedois{Nome do aluno 2}
 \local{Sorocaba/SP}
-\data{2021}
+\data{2022}
 
 % ---
 % Informações sobre orientador
 % ---
-\orientador{Nome do orientador}
+\orientador{Johannes von Lochter}
 
 % ---
 % Informações sobre coorientador
@@ -135,7 +135,7 @@
 
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Trabalho de conclusão de curso apresentado ao Centro Universitário Facens como exigência parcial para obtenção do diploma de graduação em Engenharia da Computação.\\ Orientador: Prof. ---------------------------}
+\preambulo{Trabalho de conclusão de curso apresentado ao Centro Universitário Facens como exigência parcial para obtenção do diploma de graduação em Engenharia da Computação.\\ Orientador: Prof. Johannes von Lochter}
 % ---
 
 
@@ -281,23 +281,26 @@
 \imprimircapa
 \imprimirfolhaderosto*
 
-\input{partes/pre_textuais/ficha_catalografica.tex}
-\input{partes/pre_textuais/folha_aprovacao.tex}
-\input{partes/pre_textuais/agradecimentos.tex}
-\input{partes/pre_textuais/epigrafe.tex}
-\input{partes/pre_textuais/resumo.tex}
-\input{partes/pre_textuais/lista_figuras.tex}
-\input{partes/pre_textuais/lista_quadros.tex}
-\input{partes/pre_textuais/lista_tabelas.tex}
-\input{partes/pre_textuais/lista_siglas.tex}
+%% \input{partes/pre_textuais/ficha_catalografica.tex}
+%% \input{partes/pre_textuais/folha_aprovacao.tex}
+%% \input{partes/pre_textuais/agradecimentos.tex}
+%% \input{partes/pre_textuais/epigrafe.tex}
+%% \input{partes/pre_textuais/resumo.tex}
+%% \input{partes/pre_textuais/lista_figuras.tex}
+%% \input{partes/pre_textuais/lista_quadros.tex}
+%% \input{partes/pre_textuais/lista_tabelas.tex}
+%% \input{partes/pre_textuais/lista_siglas.tex}
 \input{partes/pre_textuais/sumario.tex}
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
+\nocite{russel2013}
+
 \textual
 \input{partes/textuais/introducao.tex}
-\input{partes/textuais/referencial_teorico.tex}
+\input{partes/textuais/carros_autonomos.tex}
+\input{partes/textuais/inteligencia_artificial.tex}
 \input{partes/textuais/metodologias.tex}
 \input{partes/textuais/resultados.tex}
 \input{partes/textuais/conclusao.tex}
@@ -307,13 +310,14 @@
 % ----------------------------------------------------------
 \bibliography{abntex2-modelo-references}
 
-\input{partes/pos_textuais/apendices.tex}
-\input{partes/pos_textuais/anexos.tex}
+%% \input{partes/pos_textuais/apendices.tex}
+%% \input{partes/pos_textuais/anexos.tex}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
 \printindex
 %---------------------------------------------------------------------
+
 
 \end{document}
