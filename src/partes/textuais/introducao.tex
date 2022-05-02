@@ -1,40 +1,99 @@
 \chapter{Introdução}
 % ----------------------------------------------------------
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
-gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
-- Trabalhos acadêmicos - Apresentação}.
+De forma geral, esta monografia visa apresentar a implementação de um
+ambiente simulado capaz de treinar um veículo autônomo que, através dos
+casos de teste, consegue se adaptar ao ambiente em que se situa buscando
+chegar a determinado objetivo, através de um algoritmo de neuroevolução que
+possui uma topologia aumentante. Desta forma, simulações de possíveis trajetos
+e adaptações de percurso podem ser rapidamente criadas e testadas sem a
+necessidade de interação com um ambiente físico.
 
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+Tratando-se de veículos autônomos, é possível citar os carros sem
+motorista, segundo \citeonline{arruda2015}, são veículos capazes de realizar tarefas
+[...] sem a intervenção de operadores humanos, sua demanda vem crescendo
+ultimamente por conta da acessibilidade que fornecem e por permitirem uma
+produtividade maior ao motorista. Considerados também veículos autônomos,
+existem aqueles voltados para sistemas logísticos, onde, através de mínima
+interação com operadores, salvo manutenções e reprogramações, são capazes
+de realizar transporte de objetos por uma linha de produção.
 
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+A solução geralmente aplicada para carros autônomos se fundamenta no
+princípio da visão computacional. Esta técnica se baseia em utilizar de câmeras
+para a captura de imagens que virão a servir de entrada de dados, para que o
+algoritmo de direção tome as devidas decisões quanto à melhor decisão a ser
+tomada para aquela situação.
 
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folha de aprovação, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} para mais informações.
+O problema desta técnica se encontra justamente na lentidão de colocar
+os sistemas em prática, pois é necessário que se criem diversas situações de
+teste com muitas variáveis aplicáveis, como iluminação ou resolução da foto, e
+considerando que a aplicação é direcionada a carros que navegarão pelas ruas,
+é necessário que estes testes sejam prolongados ainda mais para que se haja
+uma garantia de segurança a todos ao redor do veículo.
 
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
+Ao observar veículos autônomos dentro do ambiente fabril, é possível
+encontrar máquinas chamadas de Veículos Automaticamente Guiados (AGVs),
+seu uso para o transporte de contêineres data de 1993 em um terminal de
+contêineres de Rotterdan \cite{saputra2021}. Estes possuem a finalidade
+de transportar materiais e produtos pela fábrica, através de sensores, são
+capazes de identificar a distância necessária para a movimentação do garfo
+quando aplicados a uma empilhadeira ou a distância de segurança para evitar
+acidentes. A sua trajetória desses veículos é geralmente predefinida, baseando-
+se na planta da fábrica e o caminho que o veículo deve percorrer, como através
+de faixas magnéticas, por exemplo. Sendo assim, estes dispositivos falham
+quando encontram obstáculos em seu caminho, como um pallet ou caixa que
+manterão sua movimentação impedida.
 
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
+Tratando-se de aprendizado de máquina, existem diversas técnicas que
+podem ser empregadas para se chegar a resultados simulados, estas, focadas
+na modelagem da estrutura de aprendizado podem ser divididas entre,
+supervisionado, não supervisionado e por reforço. A aplicação de cada método
+deve ser indicada de acordo com a necessidade da aplicação, e, analisando a
+proposta do projeto presente nesta monografia, é possível analisar qual solução
+possui a aplicação mais justificável. Em uma observação imediata, o
+aprendizado por máquina supervisionado (aquele em que se sabe quais são as
+possíveis entradas e saídas equivalentes a elas) se torna inviável, tal que a
+aplicação exige que o algoritmo calcule em tempo real a intermissão de possíveis
+objetos em seu trajeto, sendo assim impossível definir uma saída previamente.
 
-Equipe \abnTeX 
+Este projeto procura explorar um tipo diferente de aprendizado, chamado
+de aprendizado por reforço. Esse tipo de aprendizado tem a característica de
+não necessitar de supervisão para o treinamento do modelo. Ou seja, não se faz
+necessário treinamento em campo ou uma requisição de grande quantidade de
+dados para a etapa de treinamento. Como entradas para o modelo serão
+utilizados sensores de distância, em vez dos habituais sistemas de visão
+computacional. O experimento será feito dentro de um ambiente virtual, com a
+representação do carro e trajetos gerados aleatoriamente para treinamento.
 
-Lauro César Araujo
+O método de aprendizado por reforço faz necessário menos investimentos
+antecipados, pois os dados de treinamento serão obtidos por um quociente de
+performance ao invés de dados rotulados para retroalimentação. Além disso, a
+utilização de sensores diminui significativamente o requerimento de poder
+computacional para o sistema comparado com processamento de imagens, e o
+mesmo pode ser dito quanto ao algoritmo de aprendizado na etapa de testes.
+
+O aprendizado se dará pelo algoritmo NEAT (Neuroevolution of
+Augmenting Topologies). Este algoritmo se inicia com uma rede neural com
+apenas as entradas e saídas definidas. Por meio de um Algoritmo Genético, o
+algoritmo evoluirá a topologia da rede neural de forma a melhorar o desempenho
+do carro (neste caso, conseguir dirigir por mais tempo sem colisões).
+
+Por exemplo, a princípio o algoritmo gera diversos carros com topologias
+aleatórias da rede neural. Os carros que percorrerem a maior distância sem
+colisões serão selecionados para reprodução - seus genes serão combinados
+com outros carros de performance alta, além de também ocorrerem mutações
+para o descobrimento de novos comportamentos. Este processo criará uma nova
+geração de carros, que passará pelos mesmos testes, e o processo se repetirá.
+
+Deste modo, espera-se atingir um estado de otimização em que se faz
+possível o alcance da trajetória especificada sem colisões, e preferivelmente em
+um caminho próximo do mais otimizado.
+
+Apesar da elevada facilidade introduzida com esse método, a perda de
+flexibilidade na utilização pode ser algo que geraria necessidade de um sistema
+mais robusto como o de visão computacional. Um outro contraponto seria a
+necessidade de um ambiente mais controlado, para certificar um funcionamento
+correto dos sensores no ambiente e nos possíveis obstáculos. Mesmo com tais
+observações, existe margem para crer que o método proposto se faz uma
+alternativa interessante em aplicações em que as condições de funcionamento
+podem ser mapeadas previamente
