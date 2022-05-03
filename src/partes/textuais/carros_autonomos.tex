@@ -6,16 +6,33 @@ necessitarem de um condutor para tomada de decisões. Esses podem ser divididos
 em duas categorias: internos e externos, com os internos focando em aplicações
 industriais e os externos para ambientes urbanos e consumidores finais.
 
-Existem níveis de automação veicular divididos em 5 categorias, que possuem o
-intuito de facilitar o entendimento da função do veículo no ambiente para qual
-foi desenvolvido. Os níveis podem ser observados na \autoref{fig_niveis}.
+Segundo \citeonline{sae2018} Existem níveis de automação veicular divididos em
+5 categorias, que possuem o intuito de facilitar o entendimento da função do
+veículo no ambiente para qual foi desenvolvido. Esses niveis s{\~a}o:
 
-\begin{figure}[htb]
-        \centering
-        \caption{\label{fig_niveis}Níveis de automação de direção, segundo a SAE.}
-        \includegraphics[width=0.9\textwidth]{images/nhtsa_sae_automation_levels1-1024x391.png}
-        \legend{Fonte: \url{http://www.each.usp.br/petsi/jornal/?p=2514}}
-\end{figure}
+\begin{quote}
+\begin{enumerate}
+        \setcounter{enumi}{-1} 
+        \item N{\~a}o automa{\c c}{\~a}o: Autonomia zero; O motorista realiza
+                todas as tarefas.
+        \item Dire{\c c}{\~a}o Assistida: O ve{\'i}culo {\'e} controlado pelo
+                motorista mas algumas assist{\^e}ncias {\`a} condu{\c c}{\~a}o
+                podem ser inclu{\'i}das no ve{\'i}culo.
+        \item Automação Parcial: O veículo possui algumas funcões automatizadas
+                de controle de maneira combinada, como aceleração e direção,
+                mas o motorista precisa permanecer preparado para tomar o
+                controle e monitorar o ambiente o tempo todo.
+        \item Automação Condicional: O veículo é capaz de realizar as tarefas
+                de direção sozinho em certas circunstancias, porém o motorista
+                precisa permanecer preparado o tempo todo.
+        \item Automação Elevada: O veículo {\'e} capaz de realizar as tarefas
+                de direção sozinho em certas circunstancias. O motorista pode
+                ter a opção de controlar o veículo
+        \item Automação Completa: O veículo é capaz de realizar as tarefas de
+                direção sozinho sob qualquer circunstancia.  O motorista pode
+                ter a opção de controlar o veículo.
+\end{enumerate}
+\end{quote}
 
 \section{Ve{\'i}culo Guiado Automaticamente}
 
@@ -27,8 +44,22 @@ ambiente no passado recente é o da Indústria 4.0, o qual define o uso de
 diversas tecnologias na área de inteligência artificial, computação em nuvem,
 big data e internet das coisas a fim de se automatizar processos que viriam a
 demandar recursos da empresa, e consequentemente, afetando sua produtividade.
+A \autoref{fig_growth} ilustra o avan{\c c}o dos investimentos na {\'a}rea ao longo
+dos {\'u}ltimos anos.
 
-A automação de máquinas, visa permitir que os operários da produção sejam
+\begin{figure}[htb]
+        \centering
+        \caption{\label{fig_growth}Gr{\'a}fico de evolu{\c c}{\~a}o de investimentos em rob{\^o}s industriais.}
+        \includegraphics[width=0.7\textwidth]{images/Global-spending-industrial-robots-760x428.png}
+        \legend{
+                \protect\footnotemark
+                Dispon{\'i}vel em: \url{https://www.raconteur.net}. Acesso em: 3 Mai. 2022.
+        }
+\end{figure}
+
+\footnotetext{Imagem retirada de: \url{https://www.raconteur.net/industry-4-0-smart-machines-are-new-industrial-revolution/}}
+
+A automação de máquinas visa permitir que os operários da produção sejam
 capazes de as programar e deixar a executar funções sozinhas, com ou sem uma
 supervisão externa, mas sempre sem a necessidade de um operador humano, o
 avanço da quarta revolução industrial vem permitindo que estas máquinas
@@ -36,7 +67,6 @@ executem suas funções de forma mais rápida e precisa com o passar do tempo. U
 função básica e de extrema importância para o ambiente industrial, é a de
 manuseio e movimentação de materiais pela planta da fábrica, principalmente no
 transporte de carga. 
-
 
 Os veículos guiados automaticamente, conhecidos como AGVs, são veículos móveis
 e programáveis que cumprem a função de transporte de carga dentro de um espaço
@@ -79,7 +109,20 @@ popularmente conhecidos é possível citar:
 
 Além dos citados, existem outros tipos de modelos empregados na indústria que
 podem vir a ser utilizados por empresas em situações específicas de sua
-necessidade, adaptando os AGVs de acordo com sua linha de produção.
+necessidade, adaptando os AGVs de acordo com sua linha de produção. É possível
+verificar alguns exemplos na \autoref{fig_agv}.
+
+\begin{figure}[htb]
+        \centering
+        \caption{\label{fig_agv}Modelos diversos de AGVs adaptados para suas aplica{\c c}{\~o}es.}
+        \includegraphics[width=0.7\textwidth]{images/suzhou-agv-robot-products.jpg}
+        \legend{
+                \protect\footnotemark
+                Dispon{\'i}vel em: \url{https://www.agvnetwork.com}. Acesso em: 3 Mai. 2022.
+        }
+\end{figure}
+
+\footnotetext{Imagem retirada de: \url{https://www.agvnetwork.com/automated-guided-vehicles-manufacturers}}
 
 \subsection{M{\'e}todos de navega{\c c}{\~a}o de AGVs}
 
@@ -146,13 +189,6 @@ aplicável ao problema proposto.
 
 \end{itemize}
 
-%\begin{figure}[htb]
-%        \centering
-%        \caption{\label{fig_niveis}Exemplos de funcionalidade dos AGVs.}
-%        \includegraphics[width=0.9\textwidth]{images/AGV_and_AMR_Navigation_Technology.jpg}
-%        \legend{Fonte: \url{https://www.agvnetwork.com/types-of-navigation-systems-automated-guided-vehicles}}
-%\end{figure}
-
 Estes veículos que não necessitam de guias externos também são chamados de AMR,
 que diferentemente dos AGVs convencionais, possuem inteligência própria e
 geralmente se encontram atrelados a contextos de Indústria 4.0 e Internet das
@@ -160,6 +196,21 @@ Coisas. Novamente, a melhor solução para cada problema depende de sua
 aplicação, a navegação por caminho física é mais fácil de ser implementada e já
 pode ser encontrada na indústria a muito tempo enquanto a por caminho virtual
 exige uma complexidade de mapeamento prévio mas a torna mais versátil.
+
+%É possível verificar na \autoref{fig_amr} diferentes tipos de tecnologias de
+%navegação para AVGs, cada um com o ambiente adaptado a sua aplicação.
+%
+%\begin{figure}[htb]
+%        \centering
+%        \caption{\label{fig_amr}Tecnologias de Navegação de AGVs.}
+%        \includegraphics[width=0.7\textwidth]{images/AGV_and_AMR_Navigation_Technology.jpg}
+%        \legend{
+%                \protect\footnotemark
+%                Dispon{\'i}vel em: \url{https://www.agvnetwork.com}. Acesso em: 3 Mai. 2022.
+%        }
+%\end{figure}
+
+%\footnotetext{Imagem retirada de: \url{https://www.agvnetwork.com/types-of-automated-guided-vehicles}}
 
 \section{Carros Aut{\^o}nomos}
 
@@ -202,9 +253,13 @@ história foi o NavLab 1, lançado em 1986 \cite{estadao2020}, demonstrado na \a
 \begin{figure}[htb]
         \centering
         \caption{\label{fig_navlab}NavLab 1.}
-        \includegraphics[width=0.9\textwidth]{images/EG-navlab1-CMU-media-relations.jpg}
-        \legend{Fonte: \url{https://www.rediscoverthe80s.com/2016/11/navlab-the-selfdriving-car-of-the-80s.html}}
+        \includegraphics[width=0.5\textwidth]{images/EG-navlab1-CMU-media-relations.jpg}
+        \legend{
+                \protect\footnotemark
+                Dispon{\'i}vel em: \url{https://www.rediscoverthe80s.com}. Acesso em: 3 Mai. 2022.
+        }
 \end{figure}
+\footnotetext{Imagem retirada de: \url{https://www.rediscoverthe80s.com/2016/11/navlab-the-selfdriving-car-of-the-80s.html}}
 
 \subsection{Ve{\'i}culos aut{\^o}nomos atuais}
 
@@ -246,13 +301,6 @@ S}, demonstrado na \autoref{fig_models}. O \textit{Autopilot} é capaz de levar
 o veículo do ponto A ao ponto B, com uma rota traçada anteriormente pelo GPS,
 de maneira em que o condutor não precise conduzir o veículo durante o percurso. 
 
-\begin{figure}[htb]
-        \centering
-        \caption{\label{fig_models}Tesla Model S.}
-        \includegraphics[width=0.8\textwidth]{images/01e87df6ce89a7b3ea1141da979d599b.jpg}
-        \legend{Fonte: \url{https://www.tesla.com/videos/enhance-your-commute-autopilot}}
-\end{figure}
-
 O Autopilot surgiu como um grande avanço na trajetória ao nível de 5 de
 automação veicular, sendo usado também como peça publicitária para chamar a
 atenção do público os veículos elétricos, conseguindo os popularizar. Além
@@ -260,6 +308,18 @@ disso, chamou também a atenção da indústria automotiva de modo geral,
 acelerando as montadoras tradicionais de veículos a combustão, dada a cobrança
 e interesse do consumidor final, em seu desenvolvimento de uma tecnologia de
 automação similar a da Tesla capaz de atingir o  nível 2 ou nível 3.
+
+\begin{figure}[htb]
+        \centering
+        \caption{\label{fig_models}Tesla Model S.}
+        \includegraphics[width=0.7\textwidth]{images/01e87df6ce89a7b3ea1141da979d599b.jpg}
+        \legend{
+                \protect\footnotemark
+                Dispon{\'i}vel em: \url{https://www.tesla.com/videos/enhance-your-commute-autopilot}. Acesso em: 3 Mai. 2022.
+        }
+\end{figure}
+
+\footnotetext{Imagem retirada de: \url{https://www.tesla.com/videos/enhance-your-commute-autopilot}}
 
 Para seu funcionamento, o Autopilot utiliza um \textit{hardware} similar ao NavLab 1,
 com câmeras 360, sensores ultra-sônicos, sensores infravermelho e uma vasta
