@@ -39,8 +39,6 @@
 	sumario=tradicional, % estilo do sumário (tradicional = indentado)
 	% -- opções do pacote babel --
 	english,			 % idioma adicional para hifenização
-	french,				 % idioma adicional para hifenização
-	spanish,			 % idioma adicional para hifenização
 	brazil				 % o último idioma é o principal do documento
 	]{abntex2}
 
@@ -57,7 +55,8 @@
 \usepackage{lib/unifacens}      % Adaptações as normas da UniFacens
 \usepackage{pdfpages}           % Para incluir pdf no documento
 \usepackage{ragged2e}           % Para alinhamento de texto
-\usepackage{titlesec}
+\usepackage{titlesec}           % Para estilo dos capítulos/subcapítulos
+\usepackage[bottom]{footmisc}   % arruma posição da nota de rodapé
 % ---
 		
 % ---
@@ -85,9 +84,14 @@
 
 % Define o tamanho da fonte das seções e sub-seções para 12pt,
 % sendo as seções em negrito.
-\setsecheadstyle{\normalsize\bfseries}
+\setsecheadstyle{\normalsize}
 \setsubsecheadstyle{\normalsize}
 % ---
+
+\makeatletter
+\titleformat{\section}
+  {\MakeUppercase}{\thesection}{1em}{}
+\makeatother
 
 \graphicspath{{./images/}}
 
@@ -204,7 +208,12 @@
 }
 \makeatother
 
-% define capítulo de referencias como caixa alta
+% remove identação sumário
+\cftsetindents{chapter}{0cm}{0.5cm}
+\cftsetindents{section}{0cm}{0.8cm}
+\cftsetindents{subsection}{0cm}{1.1cm}
+
+% altera fonte do capitulo de referencias para caixa alta no sumário
 \renewcommand{\bibsection}{%
     \chapter*{\bibname}
     \bibmark
@@ -214,12 +223,9 @@
     \fi
     \prebibhook
 }
+%---
 
-% remove identação
-\cftsetindents{chapter}{0cm}{0.5cm}
-\cftsetindents{section}{0cm}{0.8cm}
-\cftsetindents{subsection}{0cm}{1.1cm}
-% ---
+\usepackage{float}
 
 % --- 
 % Espaçamentos entre linhas e parágrafos 
@@ -241,6 +247,12 @@
 % ---
 \makeindex
 % ---
+
+% remove header pagina impar
+\makepagestyle{cabecalhopaginaimpar}
+  %%cabeçalhos
+  \makeoddhead{cabecalhopaginaimpar} %% pagina ímpar ou com oneside
+    {}{}{\small\thepage}
 
 % ----
 % Início do documento
@@ -275,6 +287,8 @@
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
+\pagestyle{cabecalhopaginaimpar}
+
 \input{partes/textuais/introducao.tex}
 \input{partes/textuais/referencial_teorico.tex}
 \input{partes/textuais/metodologias.tex}
