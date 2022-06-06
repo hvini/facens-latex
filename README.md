@@ -3,6 +3,7 @@
 [![GitHub release](https://img.shields.io/github/v/tag/hvini/texcc?include_prereleases&color=informational)](https://github.com/hvini/texcc/releases/)
 [![Build Status](https://app.travis-ci.com/hvini/facens-latex.svg?branch=master)](https://app.travis-ci.com/hvini/facens-latex)
 [![Build Status](https://img.shields.io/badge/main-pdf-blueviolet)](https://raw.githubusercontent.com/hvini/texcc/master/src/main.pdf)
+[![Wiki](https://img.shields.io/badge/Wiki--yellow)](https://github.com/hvini/facens-latex/wiki)
 
 Template em LaTeX para Trabalho de Conclusão de Curso do Centro Universitário FACENS.
 
