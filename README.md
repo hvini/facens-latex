@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/v/tag/hvini/texcc?include_prereleases&color=informational)](https://github.com/hvini/texcc/releases/)
 [![Build Status](https://app.travis-ci.com/hvini/facens-latex.svg?branch=master)](https://app.travis-ci.com/hvini/facens-latex)
 [![Build Status](https://img.shields.io/badge/main-pdf-blueviolet)](https://raw.githubusercontent.com/hvini/texcc/master/src/main.pdf)
-[![Wiki](https://img.shields.io/badge/Wiki--yellow)](https://github.com/hvini/facens-latex/wiki)
+[![Contributor Covenant](https://img.shields.io/badge/Código%20de%20Conduta-2.1-4baaaa.svg)](code_of_conduct.md)
 
 Template em LaTeX para Trabalho de Conclusão de Curso do Centro Universitário FACENS.
 
@@ -20,9 +20,13 @@ caso não possua, instale o editor Visual studio code.
 No marketplace do Vscode instale a extensão `LaTeX Workshop`.  
 A cada modificação feita no arquivo .tex a extensão automaticamente re-builda e gera um pdf atualizado, mas caso esse processo não ocorra, exsite uma aba com alguns comandos para serem executados, que incluem, build e preview do pdf.
 
+## Veja também
+
+[Wiki do Facens LaTeX](https://github.com/hvini/facens-latex/wiki)
+
 ## Licença
 
-Este projeto é licenciado sobre as normas da licença MIT. Veja o arquivo [LICENSE.md](/LICENSE.md) para mais informações.
+Este projeto é distribuido sobre as normas da licença MIT. Veja o arquivo [LICENSE.md](/LICENSE.md) para mais informações.
 
 ## Agradecimentos
 
