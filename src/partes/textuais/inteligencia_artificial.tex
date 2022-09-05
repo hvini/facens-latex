@@ -98,7 +98,7 @@ executada.
 \begin{figure}[htb]
   \centering
   \caption{\label{fig_euler}Diagrama de Euler da rela{\c c}{\~a}o entre AI, ML e DL.}
-  \includegraphics[width=0.7\textwidth]{images/ai-euler.png}
+  \includegraphics[width=0.7\textwidth]{images/ai-euler.jpg}
   \legend{
     Fonte: Autoria pr{\'o}pria.
   }
@@ -135,7 +135,7 @@ ser divididos em três grandes grupos de técnicas classificatórias
 primárias, sendo elas: supervisionado, não supervisionado e semi
 supervisionado.
 
-Supervisionado: De acordo com \citeonline{miller2014}, aprendizado
+\textbf{Supervisionado}: De acordo com \citeonline{miller2014}, aprendizado
 supervisionado é uma simples formalização da ideia de aprender através
 de exemplos. Nessa técnica, os dados fornecidos ao modelo devem passar
 por um tratamento prévio para normalização e organização. Junto a
@@ -151,7 +151,7 @@ processo de aprendizado, verificando a eficácia durante o processo
 para, então, ao atingir uma boa capacidade preditiva seja possível
 utilizar o modelo com dados abstraídos de situações reais.
 
-Não supervisionado: Os algoritmos que utilizam o aprendizado não
+\textbf{Não supervisionado}: Os algoritmos que utilizam o aprendizado não
 supervisionado recebem os dados de maneira não necessariamente
 tratados e não rotulados, sem possuir um resultado específico para uma
 dada combinação de dados. Esse tipo de aprendizado propicia o
@@ -166,7 +166,7 @@ de imagem e segmentação de consumidores, onde é possível caracterizar
 tendências de compra com base na maneira com que um grupo de usuários
 utiliza as redes sociais, por exemplo.
 
-Semi supervisionado: Nesse modelo, o algoritmo utiliza um meio termo
+\textbf{Semi supervisionado}: Nesse modelo, o algoritmo utiliza um meio termo
 entre supervisionado e não supervisionado. Durante o treinamento, ele
 usa um conjunto de dados rotulados menores para orientar a
 classificação e a extração de recursos de um conjunto de dados maior e
@@ -174,9 +174,9 @@ não rotulado \cite{uibm2022}. Com isso é possível auxiliar o
 descobrimento de diferentes padrões e os classificar baseado no
 aprendizado previamente realizado com dados tratados.
 
-\section{Aprendizado por reforco}
+\section{Aprendizado por refor{\c c}o}
 
-O Aprendizado de refor{\c c}o se trata se uma subcategoria de
+O Aprendizado por Refor{\c c}o se trata se uma subcategoria de
 aprendizado de m{\'a}quina que, de forma sumarizada, mapeia situa{\c
   c}{\~o}es a a{\c c}oes de forma a maximizar uma recompensa
 num{\'e}rica. O aprendiz n{\~a}o {\'e} auxiliado em que a{\c c}{\~o}es
@@ -222,3 +222,17 @@ real pode ser extremamente custoso e demorado. Nestes casos, simula{\c
   c}{\~o}es (contanto que sejam pr{\'o}ximas o suficiente da
 realidade) podem trazer uma atraente alternativa para simplificar o
 treinamento de um modelo complexo \cite{Rao_2020_CVPR}.
+
+Tendo uma simula{\c c}{\~a}o satisfat{\'o}ria para o treinamento, o
+problema deixa de ser o tempo e custo de um processo f{\'i}sico de
+treinamento e passa a ser o poder computacional para calcular tanto a
+simula{\c c}{\~a}o quanto o algoritmo de aprendizado
+simultaneamente. Neste caso, a aplica{\c c}{\~a}o de um m{\'e}todo
+heur{\'i}stico nas itera{\c c}{\~o}es pode beneficiar o sistema na
+coordena{\c c}{\~a}o de novos cen{\'a}rios. Al{\'e}m disso, metodos
+heur{\'i}sticos evolucion{\'a}rios podem ser mais facilmente
+paraleliz{\'a}veis, tendo que as a{\c c}{\~o}es intermedi{\'a}rias
+podem ser descartadas e ter somente o resultado final (usualmente
+aptid{\~a}o ou \textit{fitness}) sendo considerado para o aprendizado.
+
+%% https://medium.com/beyond-intelligence/reinforcement-learning-or-evolutionary-strategies-nature-has-a-solution-both-8bc80db539b3
