@@ -27,7 +27,7 @@ dentro do período de tempo determinado, qualquer outro resultado é
 visto como insatisfatório.
 
 Analisando como fazer com que este objetivo seja atingido, é possível
-que a instruções o sejam dadas através de movimentos que o carro deve
+que as instruções sejam dadas através de movimentos que o carro deve
 realizar, como seguir em frente ou virar à esquerda, mas pelo tamanho
 do problema proposto, a quantidade de instruções a serem dadas
 alcançariam um nível de complexidade muito alto além de serem muito
@@ -61,12 +61,14 @@ até então, a cada novo passo uma verificação se o objetivo foi
 alcançado seria feita, sendo esta a condição de parada em caso de
 sucesso ou falha por tempo limite atingido.
 
+\textbf{****IMAGEM REPRESENTATIVA***}
+
 \section{Utilizando Intelig{\^e}ncias Artificiais}
 
 Sistemas Inteligentes são todos aqueles definidos como sistemas
 formais ou informais utilizados para obter dados e interpretá-los
-aplicando tecnologias de Inteligência Artificial (IA) e Business
-Intelligence (BI), fornecendo resultados como base para ações
+aplicando tecnologias de Inteligência Artificial (IA) e \textit{Business
+Intelligence} (BI), fornecendo resultados como base para ações
 \cite{sharda2017}. Estes sistemas podem ser considerados especialistas
 por definição, pois sua base de dados provém de dados abastecidos por
 um especialista de determinada área, com seu conhecimento armazenado,
@@ -84,8 +86,8 @@ tarefas complexas independentemente ou com pouca intervenção humana
 (ML), que são capazes de melhorar seu desempenho baseando-se numa
 alteração de seu modelo analítico e classificando os resultados,
 fazendo com que futuras iterações da execução do sistema sejam
-influenciadas, criando assim uma “inteligência própria”. O Deep
-Learning é uma metodologia mais recente da qual utiliza de padrões de
+influenciadas, criando assim uma “inteligência própria”. O \textit{Deep
+Learning} é uma metodologia mais recente da qual utiliza de padrões de
 ML e os associa com padrões biológicos humanos, como a ativação de
 neurônios simulada por uma rede neural computacional, explorada
 adiante, esta metodologia utiliza de funções mais complexas como
@@ -94,6 +96,8 @@ geralmente possui uma vantagem em relação à seu supertipo na resolução
 de problemas de reconhecimento de placas ou de voz, por conseguirem
 encontrar padrões nos dados de entrada dentro da própria tarefa sendo
 executada.
+
+\textbf{***DEEP LEARNING -> APRENDIZADO PROFUNDO***}
 
 \begin{figure}[htb]
   \centering
@@ -139,7 +143,7 @@ supervisionado.
 supervisionado é uma simples formalização da ideia de aprender através
 de exemplos. Nessa técnica, os dados fornecidos ao modelo devem passar
 por um tratamento prévio para normalização e organização. Junto a
-isso, os dados são separados em treino e teste. Os de treino são
+isso, os dados são separados em treino e teste. Os dados de treino são
 utilizados para ensinar o modelo, já os de teste são utilizados para
 verificar a eficácia do aprendizado, comparando o resultado dado pelo
 modelo com o resultado já conhecido para aquela combinação de
@@ -178,7 +182,7 @@ aprendizado previamente realizado com dados tratados.
 
 O Aprendizado por Refor{\c c}o se trata se uma subcategoria de
 aprendizado de m{\'a}quina que, de forma sumarizada, mapeia situa{\c
-  c}{\~o}es a a{\c c}oes de forma a maximizar uma recompensa
+  c}{\~o}es a a{\c c}{\~o}es de forma a maximizar uma recompensa
 num{\'e}rica. O aprendiz n{\~a}o {\'e} auxiliado em que a{\c c}{\~o}es
 tomar, mas deve descobrir quais a{\c c}{\~o}es rendem mais recompensas
 ao experiment{\'a}-las \cite{kaelbling1996}. Esse m{\'e}todo
@@ -190,6 +194,12 @@ solu{\c c}{\~a}o conhecida; e tamb{\'e}m com os m{\'e}todos
 associa{\c c}{\~a}o e \textit{clustering} para tomar suas
 decis{\~o}es. A \autoref{fig_learnings} ilustra as rela{\c c}{\~o}es e
 principais diferen{\c c}as entre esses m{\'e}todos.
+
+\textbf{***Talvez fosse interessante explicar um pouco mais a imagem,
+citando os termos existentes nela (termos mantidos em inglês).
+Algo assim: na parte central da imagem temos os sistemas: supervisionado,
+não supervisionado e por reforco. Acima e abaixo, respectivamente,
+pode se observar as entradas e saídas.....etc***}
 
 \begin{figure}[htb]
   \centering
@@ -229,7 +239,7 @@ treinamento e passa a ser o poder computacional para calcular tanto a
 simula{\c c}{\~a}o quanto o algoritmo de aprendizado simultaneamente.
 Neste caso, a aplica{\c c}{\~a}o de um m{\'e}todo heur{\'i}stico nas
 itera{\c c}{\~o}es pode beneficiar o sistema na otimiza{\c c}{\~a}o da
-cria{\c c}{\~a}o de novos cen{\'a}rios.  Al{\'e}m disso, metodos
+cria{\c c}{\~a}o de novos cen{\'a}rios. Al{\'e}m disso, metodos
 heur{\'i}sticos evolucion{\'a}rios podem ser mais facilmente
 paraleliz{\'a}veis, tendo que as a{\c c}{\~o}es intermedi{\'a}rias
 podem ser descartadas e ter somente o resultado final (usualmente
