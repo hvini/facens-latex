@@ -126,7 +126,7 @@ Considerando a arquitetura de Neuroevolução de Topologias Aumentantes como uma
 Partindo deste princípio, a \autoref{fig_DA} ilustra a construção básica da qual são englobados todos os membros da população da simulação, exemplificados como carros. Os dois principais componentes podem ser expressos como:
 
 \begin{enumerate}
-	\item \textit{genome} — cromossomo com as características do carro — Composto pelas propriedades que diferenciam cada membro da população, como o peso em suas arestas de conexão, fitness e nós totais, e também as propriedades que acatam todos os indivíduos da mesma população, como as chances de ganhar ou perder nós ou conexões durante a mutação, além da probabilidade deste processo ocorrer e a estrutura inicial a ser passada para a rede no momento de sua criação; 
+	\item \textit{genome} — cromossomo com as características do carro — Composto pelas propriedades que diferenciam cada membro da população, como o peso em suas arestas de conexão, \textit{fitness} e nós totais, e também as propriedades que acatam todos os indivíduos da mesma população, como as chances de ganhar ou perder nós ou conexões durante a mutação, além da probabilidade deste processo ocorrer e a estrutura inicial a ser passada para a rede no momento de sua criação; 
 	\item \text{brain} —  rede a qual este carro está sujeito — sendo esta composta por todo o seu conjunto de entradas, nós da camada oculta e de saída. Também é responsável pelo processo de tomada de decisão, baseando-se na rede criada a partir das conexões provindas do genoma de origem, retornando uma saída interpretada adequada.
 \end{enumerate}
 
@@ -179,7 +179,7 @@ A rede neural desenvolvida se trata de uma Rede Neural Feed-forward, de acordo c
 Esta rede também não está sendo feita com o conceito de backpropagation implementado, considerando que este cenário de testes não possui dados de treino para basear seu desempenho além da própria aptidão obtida, comparável apenas dentro da própria população. Isso acarreta na alteração de peso das arestas ocorrendo exclusivamente pelo processo de reprodução.
 
 \subsection{Processo de Execução}
-A etapa seguinte da execução do algoritmo trata do fluxo individual de cada carro após a sua parametrização e inicialização. Abrangendo a entrada de dados do ambiente de simulação ao carro, e a maneira a qual ele as interpreta e toma decisões em relação a que direção seguir, culminando em um aumento de fitness e posterior avaliação.
+A etapa seguinte da execução do algoritmo trata do fluxo individual de cada carro após a sua parametrização e inicialização. Abrangendo a entrada de dados do ambiente de simulação ao carro, e a maneira a qual ele as interpreta e toma decisões em relação a que direção seguir, culminando em um aumento de \textit{fitness} e posterior avaliação.
 
 \subsubsection{Leitura do Ambiente}
 A \autoref{fig_GA} exibe os métodos implementados responsáveis por identificar a distância do carro em relação aos obstáculos do ambiente, de modo a atualizá-la em caso de alteração e recuperação para leitura. Estes valores são armazenados como números de ponto flutuante.

@@ -63,7 +63,7 @@ necessário treinamento em campo ou uma requisição de grande quantidade de
 dados para a etapa de treinamento. Como entradas para o modelo serão
 utilizados sensores de distância, em vez dos habituais sistemas de visão
 computacional. O experimento será feito dentro de um ambiente virtual, com a
-representação do carro e trajetos gerados aleatoriamente para treinamento.
+representação do carro e trajetos gerados manualmente para treinamento.
 
 O método de aprendizado por reforço faz necessário menos investimentos
 antecipados, pois os dados de treinamento serão obtidos por um quociente de
@@ -72,16 +72,16 @@ utilização de sensores diminui significativamente o requerimento de poder
 computacional para o sistema comparado com processamento de imagens, e o
 mesmo pode ser dito quanto ao algoritmo de aprendizado na etapa de testes.
 
-O aprendizado se dará pelo algoritmo NEAT (Neuroevolution of
-Augmenting Topologies). Este algoritmo se inicia com uma rede neural com
+O aprendizado se dará pelo algoritmo NEAT (\textit{Neuroevolution of
+Augmenting Topologies}). Este algoritmo se inicia com uma rede neural com
 apenas as entradas e saídas definidas. Por meio de um Algoritmo Genético, o
 algoritmo evoluirá a topologia da rede neural de forma a melhorar o desempenho
 do carro (neste caso, conseguir dirigir por mais tempo sem colisões).
 
-Por exemplo, a princípio o algoritmo gera diversos carros com topologias
-aleatórias da rede neural. Os carros que percorrerem a maior distância sem
-colisões serão selecionados para reprodução - seus genes serão combinados
-com outros carros de performance alta, além de também ocorrerem mutações
+Exemplificando, a princípio o algoritmo gera diversos carros com topologias
+de estrutura mínima para sua rede neural. Os carros que percorrerem a maior 
+distância sem colisões serão selecionados para reprodução - seus genes serão 
+combinados com outros carros de performance alta, além de também ocorrerem mutações
 para o descobrimento de novos comportamentos. Este processo criará uma nova
 geração de carros, que passará pelos mesmos testes, e o processo se repetirá.
 
@@ -97,3 +97,10 @@ correto dos sensores no ambiente e nos possíveis obstáculos. Mesmo com tais
 observações, existe margem para crer que o método proposto se faz uma
 alternativa interessante em aplicações em que as condições de funcionamento
 podem ser mapeadas previamente.
+
+O objetivo desta pesquisa se dá em explorar de maneira prática o funcionamento do
+algoritmo de Neuroevolução de Topologias Aumentantes, de modo que seja possível 
+entender seu comportamento quando aplicado a um problema prático, o qual se baseia
+em cenários existentes. Este, porém, não vem a ser implementado em um ambiente real,
+e sim dentro de uma simulação, de modo a compará-lo com soluções similares de 
+inteligência artificial a fins de se encontrar explicações para sua forma de agir.
