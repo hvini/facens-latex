@@ -174,7 +174,7 @@ Partindo de um genoma, a criação da rede se fundamenta em unir os nós de acor
         }
 \end{figure}
 
-A rede neural desenvolvida se trata de uma Rede Neural Feed-forward, “definida por possuir topologia sem caminhos fechados” \cite{montana1989davis}, ou seja, é impossível um nó retornar à camada anterior de modo a executar um loop, o que a tornaria recorrente. 
+A rede neural desenvolvida se trata de uma Rede Neural Feed-forward, de acordo com \citeonline{montana1989davis}, definida por possuir topologia sem caminhos fechados , ou seja, é impossível um nó retornar à camada anterior de modo a executar um loop, o que a tornaria recorrente. 
 
 Esta rede também não está sendo feita com o conceito de backpropagation implementado, considerando que este cenário de testes não possui dados de treino para basear seu desempenho além da própria aptidão obtida, comparável apenas dentro da própria população. Isso acarreta na alteração de peso das arestas ocorrendo exclusivamente pelo processo de reprodução.
 
@@ -493,11 +493,11 @@ Com a intenção de valorizar a inovação dentre as informações contidas em u
 
 De modo a proteger estes indivíduos, a especiação age de modo a unir sob uma mesma categoria aqueles identificados como geneticamente próximos, assim podendo competir entre si e mantendo os de melhor resultado graças ao elitismo.
 
-Como definido por \cite{stanley2004neat}, a equação responsável por definir a distância genética entre dois genomas pode ser expressa abaixo, onde a distância  encontrada pode vir a estar abaixo do limiar de especiação ou acima dele, quando abaixo ambos os genomas são considerados da mesma espécie e quando acima, espécies distintas.
+Como definido por \citeonline{}{stanley2004neat}, a equação responsável por definir a distância genética entre dois genomas pode ser expressa abaixo, onde a distância  encontrada pode vir a estar abaixo do limiar de especiação ou acima dele, quando abaixo ambos os genomas são considerados da mesma espécie e quando acima, espécies distintas.
 
 \[ \delta = \frac{c_1 * D}{N} + c_2 * \overline{W}\]
 
-A propriedade \textit{D} define a quantidade de genes não correspondentes (desconjuntados) entre ambos os genomas, enquanto textit{\overline{W}} retrata a média da diferença de peso entre os genes correspondentes. A proposta inicial de \cite{stanley2002neat} sugeria uma diferenciação entre nós em excesso e desconjuntados, na implementação proposta neste documento ambos foram tratados da mesma forma por não haver diferença na aplicação prática. Os coeficientes \textit{c_1} e \textit{c_2} são multiplicadores aumentam ou diminuem a importância dos dois fatores ao decidir a distância genética.
+A propriedade \textit{D} define a quantidade de genes não correspondentes (desconjuntados) entre ambos os genomas, enquanto textit{\overline{W}} retrata a média da diferença de peso entre os genes correspondentes. A proposta inicial de \citeonline{}{stanley2002neat} sugeria uma diferenciação entre nós em excesso e desconjuntados, na implementação proposta neste documento ambos foram tratados da mesma forma por não haver diferença na aplicação prática. Os coeficientes \textit{c_1} e \textit{c_2} são multiplicadores aumentam ou diminuem a importância dos dois fatores ao decidir a distância genética.
 
 Realizando uma simples comparação entre dois genomas teóricos, a \autoref{fig_NA} apresenta dois genomas que possuem dois nós não correspondentes e uma média de diferença de peso entre os nós de 1,5.
 
