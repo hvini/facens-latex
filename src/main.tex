@@ -213,12 +213,20 @@
 \cftsetindents{section}{0cm}{0.8cm}
 \cftsetindents{subsection}{0cm}{1.1cm}
 
-% altera fonte do capitulo de referencias para caixa alta no sumário
+% altera estilo do capítulo de referências
 \renewcommand{\bibsection}{%
+    % alinha titulo a esquerda
+    \titleformat{\chapter}
+        {\large\bfseries\MakeUppercase} % format
+        {} % label
+        {} % sep
+        {} % before
+    \titlespacing*{\chapter}{0pt}{-22pt}{*3}
     \chapter*{\bibname}
     \bibmark
     \ifnobibintoc\else
     \phantomsection
+    % altera fonte do capitulo de referencias para caixa alta no sumário
     \addcontentsline{toc}{chapter}{\uppercase{\bibname}}
     \fi
     \prebibhook
@@ -298,12 +306,6 @@
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
-\titleformat{\chapter}
-    {\large\bfseries\MakeUppercase}
-    {}
-    {}
-    {}
-\titlespacing*{\chapter}{0pt}{-22pt}{*3}
 \bibliography{abntex2-modelo-references}
 
 \input{partes/pos_textuais/apendices.tex}
